@@ -28,8 +28,6 @@ async function fetchBooks(url) {
         apiResponse = data;
         books = data.results;
         filteredBooks = [...books];
-        //genre = data.results.map((res) => res.subjects)
-        console.log(genre);
         displayBooks();
     } catch (error) {
         console.error("Error fetching books:", error);
@@ -78,16 +76,6 @@ function setupEventListeners() {
         filteredBooks = books.filter((book) =>
             book.title.toLowerCase().includes(searchTerm)
         );
-        currentPage = 1;
-        displayBooks();
-    });
-
-    // Genre filter
-    document.getElementById("genre-filter").addEventListener("change", (e) => {
-        const selectedGenre = e.target.value;
-        filteredBooks = selectedGenre ?
-            books.filter((book) => book.genre === selectedGenre) :
-            [...books];
         currentPage = 1;
         displayBooks();
     });
