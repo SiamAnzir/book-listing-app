@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Listing App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="wishlist-link">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="spinner" class="spinner" style="display: none"></div>
+
+    <main>
+        <div id="search-and-filter" style="display: none">
+            <input type="text" id="search-bar" placeholder="Search books by title" />
+            <select id="genre-filter">
+          <option value="">All Genres</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-fiction">Non-fiction</option>
+        </select>
+        </div>
+
+        <div id="book-list"></div>
+
+        <div id="pagination" style="display: none">
+            <button id="prev-page">Previous</button>
+            <span id="page-info">1</span>
+            <button id="next-page">Next</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
